@@ -1,3 +1,8 @@
+## Hire Space Changes
+* You no longer specify the go to element id by the `href` attribute, but instead by the `data-scroll` attribute such like: `<a data-scroll="#someElement">Some Scrolling Link</a>`
+* Removed the logic that appends the element id to the url
+
+
 # Smooth Scroll [![Build Status](https://travis-ci.org/cferdinandi/smooth-scroll.svg)](https://travis-ci.org/cferdinandi/smooth-scroll)
 A lightweight script to animate scrolling to anchor links. Smooth Scroll works great with [Gumshoe](https://github.com/cferdinandi/gumshoe).
 
