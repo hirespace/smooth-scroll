@@ -360,10 +360,10 @@
 		var timeLapsed = 0;
 		var percentage, position;
 
-		// Update URL
-		if ( !isNum ) {
-			updateUrl(anchor, animateSettings.updateURL);
-		}
+		// Don't Update URL
+		//if ( !isNum ) {
+		//	updateUrl(anchor, animateSettings.updateURL);
+		//}
 
 		/**
 		 * Stop the scroll animation when it reaches its target (or the bottom/top of page)
@@ -441,10 +441,12 @@
 		if ( toggle && toggle.tagName.toLowerCase() === 'a' ) {
 
 			// Check that link is an anchor and points to current page
-			if ( toggle.origin !== location.origin || toggle.pathname !== location.pathname ) return;
+			if ((toggle.origin !== location.origin || toggle.pathname !== location.pathname) && toggle.pathname !== '') {
+				return;
+			}
 
 			event.preventDefault(); // Prevent default click event
-			var hash = smoothScroll.escapeCharacters( toggle.hash ); // Escape hash characters
+			var hash = smoothScroll.escapeCharacters( toggle.getAttribute('data-scroll') ); // Escape hash characters
 			smoothScroll.animateScroll( hash, toggle, settings); // Animate scroll
 
 		}
