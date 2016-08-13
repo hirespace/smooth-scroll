@@ -1,6 +1,6 @@
 ## Hire Space Changes
 * You no longer specify the go to element id by the `href` attribute, but instead by the `data-scroll` attribute such like: `<a data-scroll="#someElement">Some Scrolling Link</a>`
-* Removed the logic that appends the element id to the url
+* Updated the default setting `updateURL` to `false`
 
 
 # Smooth Scroll [![Build Status](https://travis-ci.org/cferdinandi/smooth-scroll.svg)](https://travis-ci.org/cferdinandi/smooth-scroll)
