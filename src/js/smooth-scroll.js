@@ -25,7 +25,7 @@
 		speed: 500,
 		easing: 'easeInOutCubic',
 		offset: 0,
-		updateURL: true,
+		updateURL: false,
 		callback: function () {}
 	};
 
@@ -360,10 +360,10 @@
 		var timeLapsed = 0;
 		var percentage, position;
 
-		// Don't Update URL
-		//if ( !isNum ) {
-		//	updateUrl(anchor, animateSettings.updateURL);
-		//}
+		// Update URL
+		if ( !isNum ) {
+			updateUrl(anchor, animateSettings.updateURL);
+		}
 
 		/**
 		 * Stop the scroll animation when it reaches its target (or the bottom/top of page)
